@@ -1,5 +1,7 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import Head from 'next/head';
+import Bio from '../components/Bio';
+import Post from '../components/Post';
+import styles from '../styles/Home.module.scss';
 
 export default function Home() {
   return (
@@ -10,34 +12,37 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          My Posts
-        </h1>
+        <Bio 
+          headshot="https://pbs.twimg.com/profile_images/1369160136141377539/biO8qtON_400x400.jpg"
+          name="Kelsi Proulx"
+          tagline="Helping others to learn by doing!"
+          role="Developer Intern @BCCH Digital Lab"
+        />
 
         <ul className={styles.posts}>
           <li>
-            <p className={styles.postsContent}>
-              I’m working in Figma trying to design a new website that shows all of my tweets!         
-            </p>
-            <p className={styles.postDate}>
-              3/12/2021
-            </p>
+            <Post 
+              content="Hey, I'm a new post!" 
+              date="3/12/2021"
+            />
           </li>
           <li>
-            <p className={styles.postsContent}>
-              I’m working in Figma trying to design a new website that shows all of my tweets!         
-            </p>
-            <p className={styles.postDate}>
-              3/12/2021
-            </p>
+            <Post 
+              content="I’m working in Figma trying to design a new website that shows all of my tweets!" 
+              date="3/12/2021" 
+            />
           </li>
           <li>
-            <p className={styles.postsContent}>
-              I’m working in Figma trying to design a new website that shows all of my tweets!         
-            </p>
-            <p className={styles.postDate}>
-              3/12/2021
-            </p>
+            <Post 
+              content="I’m working in Figma trying to design a new website that shows all of my tweets!" 
+              date="3/12/2021" 
+            />
+          </li>
+          <li>
+            <Post 
+              content="I’m working in Figma trying to design a new website that shows all of my tweets!" 
+              date="3/12/2021" 
+            />
           </li>
         </ul>
 
